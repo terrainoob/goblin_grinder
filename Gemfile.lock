@@ -222,6 +222,10 @@ GEM
       ast (~> 2.4.1)
     path_expander (1.1.1)
     pg (1.4.3)
+    phlex (0.4.0)
+      syntax_tree (~> 3.6)
+      zeitwerk (~> 2.6)
+    prettier_print (1.0.2)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -391,6 +395,8 @@ GEM
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     strscan (3.0.4)
+    syntax_tree (3.6.3)
+      prettier_print
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thor (1.2.1)
@@ -456,6 +462,7 @@ DEPENDENCIES
   jsbundling-rails
   json_spec
   pg (~> 1.1)
+  phlex
   pry
   pry-byebug
   pry-stack_explorer
