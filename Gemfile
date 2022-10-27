@@ -37,6 +37,7 @@ group :development do
 end
 
 group :development, :test do
+  gem "annotate"
   gem "brakeman"
   gem "byebug"
   gem "factory_bot_rails"
