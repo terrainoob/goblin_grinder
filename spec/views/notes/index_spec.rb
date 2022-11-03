@@ -1,8 +1,8 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe ::Views::Notes::Index do
+describe Views::Notes::Index do
 
-  let(:output) { render_view(Notes.index) }
+  let(:output) { render Views::Notes::Index.new }
 
   it 'prints hello world' do
     expect(output).not_to be_nil
