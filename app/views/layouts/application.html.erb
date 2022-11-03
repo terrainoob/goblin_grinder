@@ -4,13 +4,22 @@
     <title>GoblinGrinder</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <%= csp_meta_tag %>    
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
     <%= yield %>
+    <%= render Views::Tabs.new do |t| %>
+      <% t.tab("tab 1") do %>
+        <h2>some erb crap</h2>
+      <% end %>
+      <% t.tab("tab 2") do %>
+        <h2>some more erb crap</h2>
+      <% end %>      
+    <% end %>
   </body>
 </html>
