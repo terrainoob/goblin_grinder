@@ -2,10 +2,9 @@ class NotesController < ApplicationController
   # layout false
 
   def index
-    Views::Tabs
-    # render ::Views::Notes::Index.new(
-    #   notes: Note.all
-    # )
+    render ::Views::Notes::Index.new(
+      notes: Note.all
+    )
   end
 
   def show
