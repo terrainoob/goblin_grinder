@@ -7,12 +7,21 @@ class NotesController < ApplicationController
     )
   end
 
+  def create
+    note = Note.create(note_params)
+    if note.save
+    else
+    end
+  end
+
   def show
     
   end
 
   def new
-    
+    render ::Views::Notes::New.new(
+      note: Note.new
+    )
   end
 
   def update
@@ -21,5 +30,11 @@ class NotesController < ApplicationController
 
   def destroy
 
+  end
+
+private
+
+  def note_params
+    params.require(:note).permit(:title, :body)
   end
 end

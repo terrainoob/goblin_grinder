@@ -6,9 +6,9 @@ module Views
 
     def template
       super(title: "Notes") do
-        h1 { "👋 Hello World!" }
         @notes.each do |note|
-          p { note.name }
+          h2 { note.title }
+          p { note.body }
         end
       end
     end

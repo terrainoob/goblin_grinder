@@ -20,9 +20,13 @@
 #
 FactoryBot.define do
   factory :note do
-    campaign { nil }
-    title { "MyString" }
-    body { "MyText" }
+    campaign { FactoryBot.create(:campaign) }
+    sequence :title do |n| 
+      "Note title #{n}"
+    end
+    sequence :body do |n| 
+      "Note body #{n}"
+    end
     player_visible { false }
   end
 end
