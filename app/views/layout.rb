@@ -17,9 +17,19 @@ module Views
           meta name: "viewport", content: "width=device-width,initial-scale=1"
           title { "#{@title} - Goblin Grinder" }
           stylesheet_link_tag "application"
+          javascript_include_tag "application"
         end
 
         body do
+          button(
+            type: "button",
+            class: "btn btn-lg btn-danger",
+            "data-bs-toggle" => "popover",
+            title: "Popover title",
+            "data-bs-content" => "Amazing content, right ?"
+          ) do
+            "Click to toggle popover"
+          end
           main(&)
         end
       end
