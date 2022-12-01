@@ -16,17 +16,17 @@ module Views
           csrf_meta_tags
           meta name: "viewport", content: "width=device-width,initial-scale=1"
           title { "#{@title} - Goblin Grinder" }
-          stylesheet_link_tag "application"
-          javascript_include_tag "application"
+          stylesheet_link_tag "application", "data-turbo-track": "reload"
+          javascript_include_tag "application", "data-turbo-track": "reload", defer: true 
         end
 
         body do
           button(
             type: "button",
             class: "btn btn-lg btn-danger",
-            "data-bs-toggle" => "popover",
+            data_bs_toggle: "popover",
             title: "Popover title",
-            "data-bs-content" => "Amazing content, right ?"
+            data_bs_content: "Amazing content, right ?"
           ) do
             "Click to toggle popover"
           end
