@@ -13,13 +13,5 @@
 
   <body>
     <%= yield %>
-    <%= render Views::Tabs.new do |t| %>
-      <% t.tab("tab 1") do %>
-        <h2>some erb crap</h2>
-      <% end %>
-      <% t.tab("tab 2") do %>
-        <h2>some more erb crap</h2>
-      <% end %>      
-    <% end %>
   </body>
 </html>
